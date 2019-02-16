@@ -3,4 +3,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'gradle-kts'
+rootProject.name = "gradle-kts"
