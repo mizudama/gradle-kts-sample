@@ -1,10 +1,10 @@
 plugins {
-    id "org.springframework.boot" version "2.1.3.RELEASE"
-    id "org.jetbrains.kotlin.jvm" version "1.2.71"
-    id "org.jetbrains.kotlin.plugin.spring" version "1.2.71"
+    val kotlinVersion = "1.3.21"
+    id("org.springframework.boot") version "2.1.3.RELEASE"
+    id("io.spring.dependency-management") version "1.0.6.RELEASE"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.spring") version kotlinVersion
 }
-
-apply plugin: "io.spring.dependency-management"
 
 group = "jp.mizudama.sandbox"
 version = "0.0.1-SNAPSHOT"
