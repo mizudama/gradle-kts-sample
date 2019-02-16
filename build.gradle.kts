@@ -8,10 +8,6 @@ plugins {
     kotlin("plugin.spring") version kotlinVersion
 }
 
-group = "jp.mizudama.sandbox"
-version = "0.0.1-SNAPSHOT"
-sourceCompatibility = "1.8"
-
 repositories {
     mavenCentral()
 }
