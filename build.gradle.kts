@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     val kotlinVersion = "1.3.21"
     id("org.springframework.boot") version "2.1.3.RELEASE"
@@ -22,16 +24,9 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-compileKotlin {
+tasks.withType<KotlinCompile> {
     kotlinOptions {
-        freeCompilerArgs = ["-Xjsr305=strict"]
         jvmTarget = "1.8"
-    }
-}
-
-compileTestKotlin {
-    kotlinOptions {
-        freeCompilerArgs = ["-Xjsr305=strict"]
-        jvmTarget = "1.8"
+        freeCompilerArgs = listOf("-Xjsr305=strict")
     }
 }
